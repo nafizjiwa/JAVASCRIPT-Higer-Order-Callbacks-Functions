@@ -224,5 +224,43 @@ console.log(numbers); // [3, 5, 10, 200, 414]
   - **positive** → `a` comes after `b`
   - **zero** → equal order
 ---
+Here’s a **tight, condensed summary** of `every()` and `some()` — clean, clear, and perfect for quick reference:
+
+---
+
+## **`every()` and `some()` Methods**
+
+### **`every()`**
+- Checks **ALL elements** in ARRAY pass test/satisfies condition --> Returns **true**. 
+- Stops when finds a **false** result.
+
+**Example**
+```js
+const numbers = [2, 4, 6, 8, 10];
+const hasAllEvenNumbers = numbers.every((num) => num % 2 === 0);
+
+console.log(hasAllEvenNumbers); // true
+```
+---
+
+### **`some()`**
+- Checks **IF ONE element** pass test/satisfies conditionn --> Returns **true**. 
+- Stops when finds a **true** result.
+
+**Example**
+```js
+const numbers = [1, 3, 5, 7, 8, 9];
+const hasSomeEvenNumbers = numbers.some((num) => num % 2 === 0);
+
+console.log(hasSomeEvenNumbers); // true
+```
+---
+
+### **`every()` and `some()` Key Points**
+- Both methods use a callback with up to three arguments:  
+  **element**, **index**, **array**  
+
+---
+
 
 
