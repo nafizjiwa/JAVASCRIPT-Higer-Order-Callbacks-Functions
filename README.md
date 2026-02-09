@@ -8,9 +8,9 @@ What is a **Callback function**:
 **`forEach`** array method uses a callback 
 
 ### **How**
-• 	`forEach` loops through each element and pushes it into callback    
-• 	It receives index + array optionally
-•   NO new array   
+• 	`forEach` loops through each element and performs an operation on each    
+• 	It receives the index + array optionally
+•   NO new array
 
 ### **Example**
 ```js
