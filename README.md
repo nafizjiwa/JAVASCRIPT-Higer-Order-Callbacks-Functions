@@ -8,13 +8,17 @@ What is a **Callback function**:
 **`forEach`** array method uses a callback 
 
 ### **How**
-• 	`forEach` loops through each element
-• 	handles the looping automatically by passes each element into callback
-• 	Callback receives the current element (optionally index + array)
+• 	`forEach` loops through each element and pushes it into callback    
+• 	It receives index + array optionally
+•   NO new array   
 
 ### **Example**
 ```js
+const numbers = [1, 2, 3, 4, 5];
 numbers.forEach(number => console.log(number * 2));
+***push inot a new array
+numbers.forEach(num => {newArrayDoubled.push(num * 2); });
+
 ```
 
 ### **`forEach` Callback Parameters**
@@ -261,6 +265,78 @@ console.log(hasSomeEvenNumbers); // true
   **element**, **index**, **array**  
 
 ---
+
+Here’s a **condensed, clean, classroom‑ready version** of your Higher‑Order Functions review.  
+Everything essential is preserved, but the wording is tighter and easier to scan.
+
+---
+
+# **JavaScript Higher‑Order Functions Review**
+
+## **Callback Functions & `forEach`**
+- A **callback** a function passed into another function.
+- `forEach()` loops through an array and runs a callback on each element.  
+  Callback receives: **element**, **index**, **array**.
+
+```js
+[1, 2, 3, 4, 5].forEach(n => console.log(n * 2));
+```
+
+---
+
+## **Higher‑Order Functions**
+- take a function as an argument or returns one.
+
+## **`map()`**
+- Creates a **new array** by applying a function to each element.
+- Callback receives: **element**, **index**, **array**.
+
+```js
+const doubled = [1, 2, 3, 4, 5].map(n => n * 2);
+```
+
+## **`filter()`**
+- Returns a **new array** of elements that pass a test.
+
+```js
+const even = [1,2,3,4,5,6,7,8,9,10].filter(n => n % 2 === 0);
+```
+## **`reduce()`**
+- Reduces an array to a **single value**.
+- Reducer receives: **accumulator**, **current value**.
+
+```js
+const sum = [1,2,3,4,5].reduce((acc, val) => acc + val, 0);
+```
+## **Method Chaining**
+- Calling multiple methods in sequence on the same value.
+
+```js
+const result = "  Hello, World!  "
+  .trim()
+  .toLowerCase()
+  .replace("world", "JavaScript");
+```
+## **`sort()`**
+- Sorts an array **in place**.
+- Strings sort by UTF‑16 code units by default.
+- Numbers require a compare function.
+
+```js
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.sort();
+
+[414, 200, 5, 10, 3].sort((a, b) => a - b);
+```
+
+## **`every()` & `some()`**
+- `every()` → returns **true** if *all* elements pass a test.
+- `some()` → returns **true** if *at least one* element passes.
+
+```js
+[2,4,6].every(n => n % 2 === 0); // true
+[1,3,5,8].some(n => n % 2 === 0); // true
+```
 
 
 
